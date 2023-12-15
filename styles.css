@@ -63,11 +63,17 @@ table tr:nth-child(even) td:nth-child(odd) {
     background-color: red !important;
 }
 
-
+.board td.occupied:hover {
+    cursor: not-allowed;
+}
 
 .board td.next {
     color: red;
     background-color: wheat !important;
+}
+
+.board td.next:hover {
+    cursor: pointer;
 }
 
 .board td.hover-next {
