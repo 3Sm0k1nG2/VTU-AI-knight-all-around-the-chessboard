@@ -227,6 +227,9 @@ import { AutoSolver } from "./autosolver.js";
 // }
 
 const root = document.getElementById('root');
+for(let child of root.children){
+    root.removeChild(child);
+}
 const actions = document.createElement('div');
 root.append(actions);
 
