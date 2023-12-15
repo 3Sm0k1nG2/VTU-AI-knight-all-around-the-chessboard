@@ -1,0 +1,76 @@
+:root {
+    --white-square: whitesmoke;
+    --black-square: lime;
+}
+
+table {
+    font-size: 5vh;
+    text-align: center;
+}
+
+table td {
+    height:10vh;
+    width: 10vh;
+    background-color:red;
+    /* border: 0.2vh solid black; */
+}
+
+table th {
+    height:10vh;
+    width: 10vh;
+}
+
+table tr:nth-child(even) td:nth-child(even) {
+    background-color: var(--white-square);
+}
+
+table tr:nth-child(odd) td:nth-child(odd) {
+    background-color: var(--white-square);
+}
+
+table tr:nth-child(odd) td:nth-child(even) {
+    background-color: var(--black-square);
+}
+
+table tr:nth-child(even) td:nth-child(odd) {
+    background-color: var(--black-square);
+}
+
+.board {
+    width: 100vh;
+    max-width: 100vh;
+    display: inline-block;
+}
+
+.board tbody {
+    display: inline-block;
+}
+
+.board .divider {
+    display: inline-block;
+}
+
+.board .row {
+    display: inline;
+}
+
+.board .col {
+    display: inline-block;
+}
+
+.board td.occupied {
+    color: wheat;
+    background-color: red !important;
+}
+
+
+
+.board td.next {
+    color: red;
+    background-color: wheat !important;
+}
+
+.board td.hover-next {
+    color: whitesmoke;
+    background-color: rgb(0, 238, 255) !important; 
+}
