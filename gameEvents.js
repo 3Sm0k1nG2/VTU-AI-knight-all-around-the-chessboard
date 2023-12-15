@@ -187,16 +187,17 @@ function mouseoverAction(boardManager, historyModule, e){
         if(e.target.tagName.toLowerCase() !== "td"){
             return;
         }
+
+        /** @type {HTMLTableSectionElement} */
+        const tbody = e.target.parentElement.parentElement;
+        
+        clearOldMoves(tbody);
+
         if(e.target.classList.contains("occupied")){
             return;
         }
 
         const square = _boardManager.board.get({x: e.target.cellIndex, y: getActualTableRow(e.target.parentElement)});
-        /** @type {HTMLTableSectionElement} */
-        const tbody = e.target.parentElement.parentElement;
-    
-        clearOldMoves(tbody);
-
         markNextMoves(tbody, square.nextFreePositions);
     })(e);
 }
